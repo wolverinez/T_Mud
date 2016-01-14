@@ -3,7 +3,7 @@ import dice as D
 
 def test_20roll(fv, roll):
     if fv <= 20:
-        return "critical faliure"
+        return "critical failure"
     else:
         roll = D.d20()
         if roll == 20:
@@ -11,7 +11,7 @@ def test_20roll(fv, roll):
         elif roll <= fv - 20:
             return "success"
         else:
-            return "faliure"
+            return "failure"
 
 
 def roll_skill(fv):
@@ -24,7 +24,7 @@ def roll_skill(fv):
     elif roll <= fv:
         return "success"
     else:
-        return "faliure"
+        return "failure"
 
 
 
@@ -32,7 +32,7 @@ def test_roll_skill(fv):
     i = 1
     skill_roll = roll_skill(fv)
     while True:
-        if skill_roll == "critical faliure":
+        if skill_roll == "critical failure":
             break
         skill_roll = roll_skill(fv)
         i += 1
